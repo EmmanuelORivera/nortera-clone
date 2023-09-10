@@ -10,4 +10,20 @@ describe('Navbar', () => {
     expect(linkElement).toBeInTheDocument()
     expect(svgElement).toBeInTheDocument()
   })
+
+  it('should render the burger icon button', () => {
+    render(<Navbar />)
+
+    const burgerButton = screen.getByRole('button', { name: 'Burger Icon' })
+
+    expect(burgerButton).toBeInTheDocument()
+  })
+
+  it('should have the correct number of burger icon lines', () => {
+    render(<Navbar />)
+
+    const burgerLines = screen.getAllByTestId('burger-line')
+
+    expect(burgerLines).toHaveLength(3)
+  })
 })

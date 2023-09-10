@@ -2,12 +2,12 @@ import Link from 'next/link'
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="flex items-center justify-between py-6">
       <Link href="/">
         <svg
-          data-test-id="navbar-svg"
-          width="82"
-          height="82"
+          data-testid="navbar-svg"
+          width="20"
+          height="20"
           viewBox="0 0 82 82"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -28,6 +28,23 @@ const Navbar = () => {
           ></path>
         </svg>
       </Link>
+
+      <button className="bg-white h-10 w-10 rounded-full flex items-center justify-center">
+        <span role="button" aria-label="Burger Icon" className="w-4 h-5">
+          <span
+            data-testid="burger-line"
+            className="block h-[1px] bg-custom-green my-1 rounded"
+          ></span>
+          <span
+            data-testid="burger-line"
+            className="block h-[1px] bg-custom-green my-1 rounded"
+          ></span>
+          <span
+            data-testid="burger-line"
+            className="block h-[1px] bg-custom-green my-1 rounded"
+          ></span>
+        </span>
+      </button>
     </div>
   )
 }
