@@ -1,11 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import Navbar from './Navbar'
 
-jest.mock('./Logo', () => () => <div data-testid="mocked-logo">Logo</div>)
-jest.mock('./BurgerIcon', () => () => (
-  <div data-testid="mocked-burger-icon">Burger Icon</div>
-))
-
 describe('Navbar', () => {
   it('should render the Navbar component', () => {
     render(<Navbar />)
@@ -17,14 +12,16 @@ describe('Navbar', () => {
 
   it('should render the Logo Component', () => {
     render(<Navbar />)
-    const logoElement = screen.getByTestId('mocked-logo')
+    const logoElement = screen.getByRole('link')
 
     expect(logoElement).toBeInTheDocument()
   })
 
   it('should render the BurgerIcon Component', () => {
     render(<Navbar />)
-    const burgerIconElement = screen.getByTestId('mocked-burger-icon')
+    const burgerIconElement = screen.getByRole('button', {
+      name: 'Burger Icon',
+    })
 
     expect(burgerIconElement).toBeInTheDocument()
   })
