@@ -10,7 +10,9 @@ const config: Config = {
     extend: {
       animation: {
         showsDown: 'showsDown .8s ease-in-out',
+        showsDownTitle: 'showsDownTitle .8s ease-in-out',
         showsUp: 'showsUp .8s ease-in-out',
+        showsUpTitle: 'showsUpTitle .8s ease-in-out',
         zoomImage: 'zoomImage .4s ease-in-out .8s forwards',
       },
       colors: {
@@ -27,12 +29,22 @@ const config: Config = {
           '50%': { opacity: '1' },
           '100%': { transform: 'translateY(0)' },
         },
+        showsDownTitle: {
+          '0%': { transform: 'translateY(-15px)', opacity: '0' },
+          '50%': { opacity: '1' },
+          '100%': { transform: 'translateY(0)' },
+        },
         zoomImage: {
           '0%': { transform: 'scale(1.4)' },
           '100%': { transform: 'scale(1)' },
         },
         showsUp: {
           '0%': { transform: 'translateY(30px)', opacity: '0' },
+          '50%': { opacity: '1' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        showsUpTitle: {
+          '0%': { transform: 'translateY(15px)', opacity: '0' },
           '50%': { opacity: '1' },
           '100%': { transform: 'translateY(0)' },
         },
