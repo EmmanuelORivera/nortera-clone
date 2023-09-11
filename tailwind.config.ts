@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        showsDown: 'showsDown .8s ease-in-out',
+        showsUp: 'showsUp .8s ease-in-out',
+        zoomImage: 'zoomImage .4s ease-in-out .8s forwards',
+      },
       colors: {
         'custom-green': '#1b3d38',
       },
@@ -15,6 +20,22 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      keyframes: {
+        showsDown: {
+          '0%': { transform: 'translateY(-70px)', opacity: '0' },
+          '50%': { opacity: '1' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        zoomImage: {
+          '0%': { transform: 'scale(1.4)' },
+          '100%': { transform: 'scale(1)' },
+        },
+        showsUp: {
+          '0%': { transform: 'translateY(30px)', opacity: '0' },
+          '50%': { opacity: '1' },
+          '100%': { transform: 'translateY(0)' },
+        },
       },
     },
   },
