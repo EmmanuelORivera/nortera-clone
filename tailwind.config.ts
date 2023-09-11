@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       animation: {
         showsDown: 'showsDown .8s ease-in-out',
+        clipPathUp: 'clipPathUp 1.3s ease-in-out forwards',
         showsDownTitle: 'showsDownTitle .8s ease-in-out',
         showsUp: 'showsUp .8s ease-in-out',
         showsUpTitle: 'showsUpTitle .8s ease-in-out',
@@ -28,6 +29,14 @@ const config: Config = {
           '0%': { transform: 'translateY(-70px)', opacity: '0' },
           '50%': { opacity: '1' },
           '100%': { transform: 'translateY(0)' },
+        },
+        clipPathUp: {
+          '0%': {
+            clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
+          },
+          '100%': {
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+          },
         },
         showsDownTitle: {
           '0%': { transform: 'translateY(-15px)', opacity: '0' },
