@@ -9,4 +9,12 @@ describe('Home', () => {
 
     expect(heroImage).toBeInTheDocument()
   })
+
+  it('should render the Mosaic component', () => {
+    render(<Home />)
+
+    const mosaicMainImage = screen.getByAltText('mosaic-main-image')
+
+    expect(mosaicMainImage).toBeInTheDocument()
+  })
 })
