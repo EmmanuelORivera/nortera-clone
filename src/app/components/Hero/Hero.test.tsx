@@ -19,4 +19,14 @@ describe('Hero', () => {
 
     expect(paragraphElement).toBeInTheDocument()
   })
+
+  it('should render a heading with "Nortera" as inner text', () => {
+    render(<Hero />)
+
+    const headingElement = screen.getByRole('heading')
+
+    expect(headingElement).toBeInTheDocument()
+    expect(screen.getByText('Nor')).toBeInTheDocument()
+    expect(screen.getByText('tera')).toBeInTheDocument()
+  })
 })
