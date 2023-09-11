@@ -2,11 +2,17 @@ import { render, screen } from '@testing-library/react'
 import Mosaic from './Mosaic'
 
 describe('Mosaic', () => {
-  it('should render main image', () => {
+  it('should render without errors', () => {
+    render(<Mosaic />)
+  })
+
+  it('should have appropiate alt text for images', () => {
     render(<Mosaic />)
 
-    const mosaicImage = screen.getByRole('img')
+    const mosaicMainImage = screen.getByAltText('mosaic-main-image')
+    const mosaicLastImage = screen.getByAltText('mosaic-last-image')
 
-    expect(mosaicImage).toBeInTheDocument()
+    expect(mosaicMainImage).toBeInTheDocument()
+    expect(mosaicLastImage).toBeInTheDocument()
   })
 })
