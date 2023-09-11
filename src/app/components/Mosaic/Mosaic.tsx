@@ -32,6 +32,11 @@ https://www.datocms-assets.com/85733/1675870049-image01.png?ixlib=js-3.8.0&auto=
           />
         </div>
       </div>
+      <p>
+        At Nortera, we specialize in the processing and marketing of canned and
+        frozen vegetables. We do everything possible to offer healthy and
+        sustainable food.
+      </p>
     </>
   )
 }
