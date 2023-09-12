@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} px-[8.832px] text-custom-green`}
+        className={`${montserrat.className} px-[8.832px] text-custom-green leading-9`}
       >
         <Navbar />
         {children}
