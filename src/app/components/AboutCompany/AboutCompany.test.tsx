@@ -33,7 +33,7 @@ describe('AboutCompany', () => {
       name: /learn about our company/i,
     })
 
-    expect(linkElement.getAttribute('href')).toEqual('#')
+    expect(linkElement).toHaveAttribute('href', '#')
   })
 
   it('should have a span with hover animations', () => {
@@ -41,7 +41,6 @@ describe('AboutCompany', () => {
 
     const spanElement = screen.getByTestId('animated-span')
 
-    screen.debug()
     expect(spanElement).toBeInTheDocument()
     expect(spanElement).toHaveClass('group-hover:animate-hoverIn')
     expect(spanElement).toHaveClass('animate-hoverOut')
