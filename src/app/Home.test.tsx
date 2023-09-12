@@ -17,4 +17,14 @@ describe('Home', () => {
 
     expect(mosaicMainImage).toBeInTheDocument()
   })
+
+  it('should render the AboutCompany component', () => {
+    render(<Home />)
+
+    const paragraphElement = screen.getByText(
+      /To contribute to the well-being of society through access to the richness of vegetables./i
+    )
+
+    expect(paragraphElement).toBeInTheDocument()
+  })
 })
