@@ -36,7 +36,7 @@ describe('AboutCompany', () => {
     expect(linkElement.getAttribute('href')).toEqual('#')
   })
 
-  it.only('should have a span with hover animations', () => {
+  it('should have a span with hover animations', () => {
     render(<AboutCompany />)
 
     const spanElement = screen.getByTestId('animated-span')
