@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const Mosaic = () => {
   return (
-    <>
+    <div className="mb-24">
       <div className="relative h-[373.719px] mb-12">
         <div className="w-[71vw] absolute h-full overflow-hidden">
           <Image
@@ -32,12 +32,12 @@ https://www.datocms-assets.com/85733/1675870049-image01.png?ixlib=js-3.8.0&auto=
           />
         </div>
       </div>
-      <p>
+      <p className="text-lg leading-5">
         At Nortera, we specialize in the processing and marketing of canned and
         frozen vegetables. We do everything possible to offer healthy and
         sustainable food.
       </p>
-    </>
+    </div>
   )
 }
 
