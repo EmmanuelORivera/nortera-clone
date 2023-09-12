@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div>
       <div className="flex flex-col gap-6">
-        <div className="rounded-full w-[71vw] h-[277px] self-end overflow-hidden animate-showsUp">
+        <div className="rounded-full w-[71vw] h-[71vw] self-end overflow-hidden animate-showsUp">
           <Image
             className="h-full w-full animate-zoomImage scale-[1.4] object-cover"
             alt="hero-image"
