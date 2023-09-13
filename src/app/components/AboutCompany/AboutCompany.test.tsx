@@ -1,6 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import AboutCompany from './AboutCompany'
 
+jest.mock('../GoToArrow/GoToArrow', () => () => (
+  <div data-testid="child-component">Mocked Child</div>
+))
+
 describe('AboutCompany', () => {
   it('should render the component without problems', () => {
     render(<AboutCompany />)
@@ -36,13 +40,11 @@ describe('AboutCompany', () => {
     expect(linkElement).toHaveAttribute('href', '#')
   })
 
-  it('should have a span with hover animations', () => {
+  it('it should render the GoToArrow component', () => {
     render(<AboutCompany />)
 
-    const spanElement = screen.getByTestId('animated-span')
+    const childComponent = screen.getByTestId('child-component')
 
-    expect(spanElement).toBeInTheDocument()
-    expect(spanElement).toHaveClass('group-hover:animate-hoverIn')
-    expect(spanElement).toHaveClass('animate-hoverOut')
+    expect(childComponent).toBeInTheDocument()
   })
 })
