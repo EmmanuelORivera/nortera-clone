@@ -1,38 +1,64 @@
 import { render, screen } from '@testing-library/react'
 import Home from './page'
 
+jest.mock('./components/Hero/Hero', () => () => (
+  <div data-testid="hero">Hero component</div>
+))
+
+jest.mock('./components/Mosaic/Mosaic', () => () => (
+  <div data-testid="mosaic">Mosaic component</div>
+))
+
+jest.mock('./components/AboutCompany/AboutCompany', () => () => (
+  <div data-testid="about-company">AboutCompany component</div>
+))
+
+jest.mock('./components/ImageSlider/ImageSlider', () => () => (
+  <div data-testid="image-slider">ImageSlider component</div>
+))
+
+jest.mock('./components/BusinessInfo/BusinessInfo', () => () => (
+  <div data-testid="business-info">BusinessInfo component</div>
+))
+
 describe('Home', () => {
   it('should render the Hero component', () => {
     render(<Home />)
 
-    const heroImage = screen.getByAltText('hero-image')
+    const hero = screen.getByTestId('hero')
 
-    expect(heroImage).toBeInTheDocument()
+    expect(hero).toBeInTheDocument()
   })
 
   it('should render the Mosaic component', () => {
     render(<Home />)
 
-    const mosaicMainImage = screen.getByAltText('mosaic-main-image')
+    const mosaic = screen.getByTestId('mosaic')
 
-    expect(mosaicMainImage).toBeInTheDocument()
+    expect(mosaic).toBeInTheDocument()
   })
 
   it('should render the AboutCompany component', () => {
     render(<Home />)
 
-    const paragraphElement = screen.getByText(
-      /To contribute to the well-being of society through access to the richness of vegetables./i
-    )
+    const aboutCompany = screen.getByTestId('about-company')
 
-    expect(paragraphElement).toBeInTheDocument()
+    expect(aboutCompany).toBeInTheDocument()
   })
 
   it('should render the ImageSlider component', () => {
     render(<Home />)
 
-    const slideText = screen.getAllByText(/our food/i)
+    const imageSlider = screen.getByTestId('image-slider')
 
-    expect(slideText.length).toBe(20)
+    expect(imageSlider).toBeInTheDocument()
+  })
+
+  it('should render the BusinessInfo component', () => {
+    render(<Home />)
+
+    const businessInfo = screen.getByTestId('business-info')
+
+    expect(businessInfo).toBeInTheDocument()
   })
 })
