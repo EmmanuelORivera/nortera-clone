@@ -25,7 +25,7 @@ const ImageSlider = () => {
     return divs
   }
   return (
-    <div className="overflow-hidden pt-4">
+    <div className="overflow-hidden pt-4 mb-24">
       <div className="inline-flex">
         <div
           className="flex whitespace-nowrap animate-slide"
