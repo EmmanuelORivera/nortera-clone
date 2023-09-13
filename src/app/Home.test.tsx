@@ -31,8 +31,8 @@ describe('Home', () => {
   it('should render the ImageSlider component', () => {
     render(<Home />)
 
-    const paragraphElement = screen.getByText(/our food/i)
+    const slideText = screen.getAllByText(/our food/i)
 
-    expect(paragraphElement).toBeInTheDocument()
+    expect(slideText.length).toBe(20)
   })
 })
