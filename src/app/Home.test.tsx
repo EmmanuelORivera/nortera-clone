@@ -1,30 +1,41 @@
 import { render, screen } from '@testing-library/react'
 import Home from './page'
-import Hero from './components/Hero/Hero'
-import Mosaic from './components/Mosaic/Mosaic'
-import AboutCompany from './components/AboutCompany/AboutCompany'
-import ImageSlider from './components/ImageSlider/ImageSlider'
-import BusinessInfo from './components/BusinessInfo/BusinessInfo'
 
-jest.mock('./components/Hero/Hero', () => () => (
-  <div data-testid="hero">Hero component</div>
-))
+jest.mock('./components/Hero/Hero', () => () => {
+  const MockedHero = () => <div data-testid="hero">Hero component</div>
+  MockedHero.displayName = 'Hero'
+  return MockedHero()
+})
 
-jest.mock('./components/Mosaic/Mosaic', () => () => (
-  <div data-testid="mosaic">Mosaic component</div>
-))
+jest.mock('./components/Mosaic/Mosaic', () => () => {
+  const MockedMosaic = () => <div data-testid="mosaic">Mosaic component</div>
+  MockedMosaic.displayName = 'Mosaic'
+  return MockedMosaic()
+})
 
-jest.mock('./components/AboutCompany/AboutCompany', () => () => (
-  <div data-testid="about-company">AboutCompany component</div>
-))
+jest.mock('./components/AboutCompany/AboutCompany', () => () => {
+  const MockedAboutCompany = () => (
+    <div data-testid="about-company">AboutCompany component</div>
+  )
+  MockedAboutCompany.displayName = 'AboutCompany'
+  return MockedAboutCompany()
+})
 
-jest.mock('./components/ImageSlider/ImageSlider', () => () => (
-  <div data-testid="image-slider">ImageSlider component</div>
-))
+jest.mock('./components/ImageSlider/ImageSlider', () => () => {
+  const MockedImageSlider = () => (
+    <div data-testid="image-slider">ImageSlider component</div>
+  )
+  MockedImageSlider.displayName = 'ImageSlider'
+  return MockedImageSlider()
+})
 
-jest.mock('./components/BusinessInfo/BusinessInfo', () => () => (
-  <div data-testid="business-info">BusinessInfo component</div>
-))
+jest.mock('./components/BusinessInfo/BusinessInfo', () => () => {
+  const MockedBusinessInfo = () => (
+    <div data-testid="business-info">BusinessInfo component</div>
+  )
+  MockedBusinessInfo.displayName = 'BusinessInfo'
+  return MockedBusinessInfo()
+})
 
 describe('Home', () => {
   it('should render the Hero component', () => {
