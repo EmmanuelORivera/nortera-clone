@@ -21,6 +21,7 @@ const config: Config = {
       },
       colors: {
         'custom-green': '#1b3d38',
+        'peachy-baige': '#E7C597',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -39,7 +40,7 @@ const config: Config = {
         },
         hoverOut: {
           '0%': { transform: 'translateY(0)' },
-          '100%': { transform: 'translateY(100%)' },
+          '100%': { transform: 'translateY(101%)' },
         },
         showsDown: {
           '0%': { transform: 'translateY(-70px)', opacity: '0' },
