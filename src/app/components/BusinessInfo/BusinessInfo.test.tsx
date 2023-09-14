@@ -6,12 +6,12 @@ jest.mock('./BusinessWrapper', () => () => (
 ))
 
 describe('BusinessInfo', () => {
-  beforeEach(() => {
+  it('should render the component', () => {
     render(<BusinessInfo />)
   })
-  it('should render the component', () => {})
 
   it('should render the BusinessWrapper component', () => {
+    render(<BusinessInfo />)
     const businessWrapper = screen.getByTestId('business-wrapper')
 
     expect(businessWrapper).toBeInTheDocument()

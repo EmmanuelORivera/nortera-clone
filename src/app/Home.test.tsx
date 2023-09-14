@@ -1,5 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import Home from './page'
+import Hero from './components/Hero/Hero'
+import Mosaic from './components/Mosaic/Mosaic'
+import AboutCompany from './components/AboutCompany/AboutCompany'
+import ImageSlider from './components/ImageSlider/ImageSlider'
+import BusinessInfo from './components/BusinessInfo/BusinessInfo'
 
 jest.mock('./components/Hero/Hero', () => () => (
   <div data-testid="hero">Hero component</div>
