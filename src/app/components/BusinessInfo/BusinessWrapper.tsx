@@ -5,6 +5,7 @@ import Image from 'next/image'
 interface BusinessWrapperProps {
   title: string
   description: string
+  className?: string
   children?: React.ReactNode
   type?: 'primary' | 'secondary'
 }
@@ -12,6 +13,7 @@ interface BusinessWrapperProps {
 const BusinessWrapper = ({
   title,
   description,
+  className,
   children,
   type = 'primary',
 }: BusinessWrapperProps) => {
@@ -20,7 +22,7 @@ const BusinessWrapper = ({
   return (
     <div
       data-testid="business-wrapper"
-      className={`${bgColor} text-white text-center hover:rounded-[35px] overflow-hidden transition-all duration-500 ease-in-out`}
+      className={`${bgColor} ${className} text-white text-center hover:rounded-[35px] overflow-hidden transition-all duration-500 ease-in-out`}
     >
       <div className="px-14 pt-14">
         <h4 className="text-3xl font-semibold mb-4">{title}</h4>

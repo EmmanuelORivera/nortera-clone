@@ -27,6 +27,13 @@ describe('BusinessWrapper', () => {
     expect(paragraphElement).toBeInTheDocument()
   })
 
+  it('should pass the value of className property to the className wrapper div', () => {
+    render(<BusinessWrapper title="" description="" className="mb-16" />)
+
+    const wrapper = screen.getByTestId('business-wrapper')
+    expect(wrapper).toHaveClass('mb-16')
+  })
+
   it('should have the background color "bg-custom-green" when type property is primary', () => {
     render(<BusinessWrapper title="" description="" type="primary" />)
 
