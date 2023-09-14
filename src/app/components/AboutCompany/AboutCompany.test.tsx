@@ -1,9 +1,13 @@
 import { render, screen } from '@testing-library/react'
 import AboutCompany from './AboutCompany'
 
-jest.mock('../GoToArrow/GoToArrow', () => () => (
-  <div data-testid="child-component">Mocked Child</div>
-))
+jest.mock('../GoToArrow/GoToArrow', () => () => {
+  const MockedGoToArrow = () => (
+    <div data-testid="child-component">Mocked Child</div>
+  )
+  MockedGoToArrow.displayName = 'GoToArrow'
+  return MockedGoToArrow()
+})
 
 describe('AboutCompany', () => {
   it('should render the component without problems', () => {

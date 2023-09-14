@@ -1,9 +1,14 @@
 import { screen, render } from '@testing-library/react'
 import BusinessInfo from './BusinessInfo'
 
-jest.mock('./BusinessWrapper', () => () => (
-  <div data-testid="business-wrapper">Wrapper</div>
-))
+jest.mock('./BusinessWrapper', () => () => {
+  const MockedBusinessWrapper = () => (
+    <div data-testid="business-wrapper">Wrapper</div>
+  )
+
+  MockedBusinessWrapper.displayName = 'BusinessWrapper'
+  return MockedBusinessWrapper()
+})
 
 describe('BusinessInfo', () => {
   it('should render the component', () => {
