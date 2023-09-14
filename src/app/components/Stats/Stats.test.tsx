@@ -69,6 +69,16 @@ describe('Stats', () => {
     expect(description).toBeInTheDocument()
   })
 
+  it('should render "permanent and seasonal employees" data', () => {
+    render(<Stats />)
+
+    const stats = screen.getByText('3500')
+    const description = screen.getByText('permanent and seasonal employees')
+
+    expect(stats).toBeInTheDocument()
+    expect(description).toBeInTheDocument()
+  })
+
   it('should render a link with the right text', () => {
     render(<Stats />)
 
