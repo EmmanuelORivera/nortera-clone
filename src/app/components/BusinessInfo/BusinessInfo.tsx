@@ -3,7 +3,7 @@ import BusinessWrapper from './BusinessWrapper'
 
 const BusinessInfo = () => {
   return (
-    <div>
+    <div className="pb-16 border-b border-black">
       <BusinessWrapper
         title="Our custom products"
         description="With over 260 products and two processing technologies, Nortera helps
