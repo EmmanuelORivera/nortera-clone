@@ -1,5 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import AboutCompany from './AboutCompany'
+import useIntersectionObserver from '../../hooks/useIntersectionObserver'
+import { MOVE_DOWN_CLASS } from '@/app/constants/classNames'
 
 jest.mock('../GoToArrow/GoToArrow', () => () => {
   const MockedGoToArrow = () => (
@@ -8,6 +10,8 @@ jest.mock('../GoToArrow/GoToArrow', () => () => {
   MockedGoToArrow.displayName = 'GoToArrow'
   return MockedGoToArrow()
 })
+
+jest.mock('../../hooks/useIntersectionObserver')
 
 describe('AboutCompany', () => {
   it('should render the component without problems', () => {
@@ -44,11 +48,20 @@ describe('AboutCompany', () => {
     expect(linkElement).toHaveAttribute('href', '#')
   })
 
-  it('it should render the GoToArrow component', () => {
+  it('should render the GoToArrow component', () => {
     render(<AboutCompany />)
 
     const childComponent = screen.getByTestId('child-component')
 
     expect(childComponent).toBeInTheDocument()
+  })
+
+  it('calls useIntersectionObserver with the correct arguments', () => {
+    render(<AboutCompany />)
+
+    expect(useIntersectionObserver).toHaveBeenCalledWith(
+      MOVE_DOWN_CLASS,
+      expect.any(Function)
+    )
   })
 })
