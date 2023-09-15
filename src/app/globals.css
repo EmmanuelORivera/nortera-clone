@@ -5,3 +5,11 @@
 body {
   background-color: #dbe7e8;
 }
+
+.move-down {
+  transform: translateY(50px);
+  transition: transform 2s;
+}
+.move-up {
+  transform: translateY(0);
+}
