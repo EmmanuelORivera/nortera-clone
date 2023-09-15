@@ -8,7 +8,7 @@ body {
 
 .move-down {
   transform: translateY(50px);
-  transition: transform 2s;
+  transition: transform 1s;
 }
 .move-up {
   transform: translateY(0);
