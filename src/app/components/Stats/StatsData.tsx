@@ -5,8 +5,8 @@ interface StatsDataProps {
 const StatsData = ({ data, description }: StatsDataProps) => {
   return (
     <div>
-      <p>{data}</p>
-      <p>{description}</p>
+      <p className="text-4xl font-semibold">{data}</p>
+      <p className="text-sm uppercase font-semibold">{description}</p>
     </div>
   )
 }
