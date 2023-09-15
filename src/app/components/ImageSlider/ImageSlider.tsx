@@ -1,4 +1,13 @@
+'use client'
+
+import { MOVE_DOWN_CLASS, MOVE_UP_CLASS } from '@/app/constants/classNames'
+import useIntersectionObserver from '@/app/hooks/useIntersectionObserver'
+
 const ImageSlider = () => {
+  useIntersectionObserver(MOVE_DOWN_CLASS, (target) => {
+    target.classList.add(MOVE_UP_CLASS)
+  })
+
   const renderDivs = (): JSX.Element[] => {
     const divs: JSX.Element[] = []
 
@@ -25,7 +34,7 @@ const ImageSlider = () => {
     return divs
   }
   return (
-    <div className="overflow-hidden pt-4 mb-24">
+    <div className={`overflow-hidden pt-4 mb-24 ${MOVE_DOWN_CLASS}`}>
       <div className="inline-flex">
         <div
           className="flex whitespace-nowrap animate-slide"

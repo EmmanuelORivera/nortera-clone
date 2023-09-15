@@ -8,8 +8,10 @@ body {
 
 .move-down {
   transform: translateY(50px);
-  transition: transform 1s;
+  opacity: 0;
+  transition: transform 1s, opacity 1s;
 }
 .move-up {
   transform: translateY(0);
+  opacity: 1;
 }
