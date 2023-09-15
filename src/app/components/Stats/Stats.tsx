@@ -10,7 +10,7 @@ const Stats = () => {
         Nortera in numbers
       </h2>
       <Image
-        className="rounded-t-[50%] w-[46.805vw] h-[49vw] object-cover"
+        className="rounded-t-[50%] w-[46.805vw] h-[49vw] object-cover ml-auto"
         width={800}
         height={800}
         alt="betteraves"
@@ -22,17 +22,22 @@ https://www.datocms-assets.com/85733/1681248525-betteraves-1-1-1.jpg?ixlib=js-3.
 https://www.datocms-assets.com/85733/1681248525-betteraves-1-1-1.jpg?ixlib=js-3.8.0&auto=format&w=1500 1500w,
 https://www.datocms-assets.com/85733/1681248525-betteraves-1-1-1.jpg?ixlib=js-3.8.0&auto=format&w=1800 1800w"
       />
-      <p className="text-2xl leading-7 mb-16">
+      <p className="text-2xl leading-7 mt-9 mb-16">
         With facilities in Canada and the United States, Nortera processes and
         markets over 450,000 tons of frozen and canned vegetables per year
       </p>
 
-      <StatsData data="800" description="agricultural partners" />
-      <StatsData data="120500" description="acres of land cultivated" />
-      <StatsData data="13" description="plants in north america" />
-      <StatsData data="3500" description="permanent and seasonal employees" />
+      <div className="grid grid-cols-2 gap-x-5 gap-y-16">
+        <StatsData data="800" description="agricultural partners" />
+        <StatsData data="120500" description="acres of land cultivated" />
+        <StatsData data="13" description="plants in north america" />
+        <StatsData data="3500" description="permanent and seasonal employees" />
+      </div>
 
-      <Link href="#" className="group">
+      <Link
+        href="#"
+        className="group inline-flex mt-16 items-center gap-4 uppercase text-sm"
+      >
         <GoToArrow />
         Learn about our approach
       </Link>
