@@ -28,6 +28,16 @@ describe('AboutCompany', () => {
     expect(paragraphElement).toBeInTheDocument()
   })
 
+  it('has a paragraph with a className "MOVE_DOWN_CLASS"', () => {
+    render(<AboutCompany />)
+
+    const paragraphElement = screen.getByText(
+      /To contribute to the well-being of society through access to the richness of vegetables./i
+    )
+
+    expect(paragraphElement).toHaveClass(MOVE_DOWN_CLASS)
+  })
+
   it('should render a link', () => {
     render(<AboutCompany />)
 
