@@ -23,6 +23,8 @@ describe('BusinessInfo', () => {
       },
     ]
 
+    expect(businessWrappers.length).toBe(2)
+
     businessWrappers.forEach((_, index) => {
       const { title, description } = expectedContent[index]
       const titleElement = screen.getByText(title)
