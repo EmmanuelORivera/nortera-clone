@@ -1,9 +1,9 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import GoToArrow from '../GoToArrow/GoToArrow'
 import StatsData from './StatsData'
 import WrapperIntersectionObserver from '@/app/components/WrapperIntersectionObserver/WrapperIntersectionObserver'
 import { MOVE_DOWN_CLASS, MOVE_UP_CLASS } from '@/app/constants/classNames'
+import StatsImage from './StatsImage'
 
 const Stats = () => {
   return (
@@ -11,19 +11,10 @@ const Stats = () => {
       <h2 className="text-2xl font-semibold uppercase mb-16">
         Nortera in numbers
       </h2>
-      <Image
-        className="rounded-t-[50%] w-[46.805vw] h-[49vw] object-cover ml-auto"
-        width={800}
-        height={800}
-        alt="betteraves"
-        src="https://www.datocms-assets.com/85733/1681248525-betteraves-1-1-1.jpg?ixlib=js-3.8.0&auto=format&w=100 100w,
-https://www.datocms-assets.com/85733/1681248525-betteraves-1-1-1.jpg?ixlib=js-3.8.0&auto=format&w=300 300w,
-https://www.datocms-assets.com/85733/1681248525-betteraves-1-1-1.jpg?ixlib=js-3.8.0&auto=format&w=600 600w,
-https://www.datocms-assets.com/85733/1681248525-betteraves-1-1-1.jpg?ixlib=js-3.8.0&auto=format&w=900 900w,
-https://www.datocms-assets.com/85733/1681248525-betteraves-1-1-1.jpg?ixlib=js-3.8.0&auto=format&w=1200 1200w,
-https://www.datocms-assets.com/85733/1681248525-betteraves-1-1-1.jpg?ixlib=js-3.8.0&auto=format&w=1500 1500w,
-https://www.datocms-assets.com/85733/1681248525-betteraves-1-1-1.jpg?ixlib=js-3.8.0&auto=format&w=1800 1800w"
-      />
+
+      <div className="rounded-t-[50%] w-[46.805vw] h-[49vw] ml-auto overflow-hidden">
+        <StatsImage />
+      </div>
       <WrapperIntersectionObserver
         targetSelector={MOVE_DOWN_CLASS}
         classNameToAdd={MOVE_UP_CLASS}
