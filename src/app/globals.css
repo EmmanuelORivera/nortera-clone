@@ -6,6 +6,7 @@ body {
   background-color: #dbe7e8;
 }
 
+/* Animation css */
 .move-down {
   transform: translateY(50px);
   opacity: 0;
@@ -14,4 +15,13 @@ body {
 .move-up {
   transform: translateY(0);
   opacity: 1;
+}
+
+.final-zoom {
+  transform: scale(1.2);
+  transition: transform 0.8s;
+}
+
+.initial-zoom {
+  transform: scale(1);
 }
