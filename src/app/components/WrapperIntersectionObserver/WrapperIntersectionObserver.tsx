@@ -6,17 +6,19 @@ const WrapperIntersectionObserver = ({
   targetSelector,
   classNameToAdd,
   children,
+  className,
 }: {
   targetSelector: string
   classNameToAdd: string
   children: React.ReactNode
+  className?: string
 }) => {
   const callback = (target: Element) => {
     target.classList.add(classNameToAdd)
   }
 
   useIntersectionObserver(targetSelector, callback)
-  return <div className={targetSelector}>{children}</div>
+  return <div className={`${targetSelector} ${className}`}>{children}</div>
 }
 
 export default WrapperIntersectionObserver
