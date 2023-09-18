@@ -45,8 +45,10 @@ describe('Stats', () => {
 
     await waitFor(() => {
       const stats = screen.getByText('800')
-      const description = screen.getByText('agricultural partners')
       expect(stats).toBeInTheDocument()
+    })
+    await waitFor(() => {
+      const description = screen.getByText('agricultural partners')
       expect(description).toBeInTheDocument()
     })
   })
@@ -56,8 +58,10 @@ describe('Stats', () => {
 
     await waitFor(() => {
       const stats = screen.getByText('120500')
-      const description = screen.getByText('acres of land cultivated')
       expect(stats).toBeInTheDocument()
+    })
+    await waitFor(() => {
+      const description = screen.getByText('acres of land cultivated')
       expect(description).toBeInTheDocument()
     })
   })
@@ -67,8 +71,10 @@ describe('Stats', () => {
 
     await waitFor(() => {
       const stats = screen.getByText('13')
-      const description = screen.getByText('plants in north america')
       expect(stats).toBeInTheDocument()
+    })
+    await waitFor(() => {
+      const description = screen.getByText('plants in north america')
       expect(description).toBeInTheDocument()
     })
   })
@@ -78,8 +84,11 @@ describe('Stats', () => {
 
     await waitFor(() => {
       const stats = screen.getByText('3500')
-      const description = screen.getByText('permanent and seasonal employees')
       expect(stats).toBeInTheDocument()
+    })
+
+    await waitFor(() => {
+      const description = screen.getByText('permanent and seasonal employees')
       expect(description).toBeInTheDocument()
     })
   })
