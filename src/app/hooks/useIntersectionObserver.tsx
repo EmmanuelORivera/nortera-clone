@@ -11,11 +11,11 @@ function useIntersectionObserver(
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           callback(entry.target)
+          observerRef.current?.unobserve(entry.target)
         }
       })
     })
-
-    const elements = document.querySelectorAll(`.${targetSelector}`)
+    const elements = document.querySelectorAll(`${targetSelector}`)
     elements.forEach((el) => observerRef.current!.observe(el))
 
     return () => {
