@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import AboutCompany from './AboutCompany'
-import useIntersectionObserver from '../../hooks/useIntersectionObserver'
-import { MOVE_DOWN_CLASS } from '@/app/constants/classNames'
+import { MOVE_DOWN_CLASS, MOVE_UP_CLASS } from '@/app/constants/classNames'
+import { act } from 'react-dom/test-utils'
 
 jest.mock('../GoToArrow/GoToArrow', () => () => {
   const MockedGoToArrow = () => (
@@ -10,8 +10,6 @@ jest.mock('../GoToArrow/GoToArrow', () => () => {
   MockedGoToArrow.displayName = 'GoToArrow'
   return MockedGoToArrow()
 })
-
-jest.mock('../../hooks/useIntersectionObserver')
 
 describe('AboutCompany', () => {
   it('should render the component without problems', () => {
@@ -26,6 +24,30 @@ describe('AboutCompany', () => {
     )
 
     expect(paragraphElement).toBeInTheDocument()
+  })
+
+  it('should have a paragraph with className MOVE_DOWN_CLASS', () => {
+    render(<AboutCompany />)
+
+    const paragraphElement = screen.getByText(
+      /To contribute to the well-being of society through access to the richness of vegetables./i
+    )
+
+    expect(paragraphElement).toHaveClass(MOVE_DOWN_CLASS)
+  })
+
+  it('should be added the MOVE_UP_CLASS to the paragraph that it has MOVE_DOWN_CLASS', () => {
+    render(<AboutCompany />)
+    const paragraphElement = screen.getByText(
+      /To contribute to the well-being of society through access to the richness of vegetables./i
+    )
+
+    act(() => {
+      paragraphElement.classList.add(MOVE_UP_CLASS)
+    })
+
+    expect(paragraphElement).toHaveClass(MOVE_DOWN_CLASS)
+    expect(paragraphElement).toHaveClass(MOVE_UP_CLASS)
   })
 
   it('should render a link', () => {
@@ -54,14 +76,5 @@ describe('AboutCompany', () => {
     const childComponent = screen.getByTestId('child-component')
 
     expect(childComponent).toBeInTheDocument()
-  })
-
-  it('calls useIntersectionObserver with the correct arguments', () => {
-    render(<AboutCompany />)
-
-    expect(useIntersectionObserver).toHaveBeenCalledWith(
-      MOVE_DOWN_CLASS,
-      expect.any(Function)
-    )
   })
 })

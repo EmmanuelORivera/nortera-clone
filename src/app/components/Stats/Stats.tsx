@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import GoToArrow from '../GoToArrow/GoToArrow'
 import StatsData from './StatsData'
-import WrapperIntersectionObserver from '@/app/components/WrapperIntersectionObserver/WrapperIntersectionObserver'
-import { MOVE_DOWN_CLASS, MOVE_UP_CLASS } from '@/app/constants/classNames'
+import { MOVE_DOWN_CLASS } from '@/app/constants/classNames'
 import StatsImage from './StatsImage'
 
 const Stats = () => {
@@ -15,15 +14,12 @@ const Stats = () => {
       <div className="rounded-t-[50%] w-[46.805vw] h-[49vw] ml-auto overflow-hidden">
         <StatsImage />
       </div>
-      <WrapperIntersectionObserver
-        targetSelector={MOVE_DOWN_CLASS}
-        classNameToAdd={MOVE_UP_CLASS}
-      >
-        <p className="text-2xl leading-7 mt-9 mb-16">
-          With facilities in Canada and the United States, Nortera processes and
-          markets over 450,000 tons of frozen and canned vegetables per year
-        </p>
-      </WrapperIntersectionObserver>
+
+      <p className={`${MOVE_DOWN_CLASS}text-2xl leading-7 mt-9 mb-16`}>
+        With facilities in Canada and the United States, Nortera processes and
+        markets over 450,000 tons of frozen and canned vegetables per year
+      </p>
+
       <div className="grid grid-cols-2 gap-x-5 gap-y-16">
         <StatsData data="800" description="agricultural partners" />
         <StatsData data="120500" description="acres of land cultivated" />

@@ -1,12 +1,7 @@
-'use client'
-import { FINAL_ZOOM, INITIAL_ZOOM } from '@/app/constants/classNames'
-import useIntersectionObserver from '@/app/hooks/useIntersectionObserver'
+import { FINAL_ZOOM } from '@/app/constants/classNames'
 import Image from 'next/image'
 
 const StatsImage = () => {
-  useIntersectionObserver(FINAL_ZOOM, (target) => {
-    target.classList.add(INITIAL_ZOOM)
-  })
   return (
     <>
       <Image

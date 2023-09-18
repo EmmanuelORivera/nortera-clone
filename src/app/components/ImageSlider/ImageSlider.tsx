@@ -1,7 +1,4 @@
-'use client'
-
-import { MOVE_DOWN_CLASS, MOVE_UP_CLASS } from '@/app/constants/classNames'
-import WrapperIntersectionObserver from '@/app/components/WrapperIntersectionObserver/WrapperIntersectionObserver'
+import { MOVE_DOWN_CLASS } from '@/app/constants/classNames'
 
 const ImageSlider = () => {
   const renderDivs = (): JSX.Element[] => {
@@ -30,27 +27,22 @@ const ImageSlider = () => {
     return divs
   }
   return (
-    <WrapperIntersectionObserver
-      targetSelector={MOVE_DOWN_CLASS}
-      classNameToAdd={MOVE_UP_CLASS}
-    >
-      <div className={`overflow-hidden pt-4 mb-24`}>
-        <div className="inline-flex">
-          <div
-            className="flex whitespace-nowrap animate-slide"
-            data-testid="slider-animated"
-          >
-            {renderDivs()}
-          </div>
-          <div
-            className="flex whitespace-nowrap animate-slide"
-            data-testid="slider-animated"
-          >
-            {renderDivs()}
-          </div>
+    <div className={`${MOVE_DOWN_CLASS} overflow-hidden pt-4 mb-24`}>
+      <div className="inline-flex">
+        <div
+          className="flex whitespace-nowrap animate-slide"
+          data-testid="slider-animated"
+        >
+          {renderDivs()}
+        </div>
+        <div
+          className="flex whitespace-nowrap animate-slide"
+          data-testid="slider-animated"
+        >
+          {renderDivs()}
         </div>
       </div>
-    </WrapperIntersectionObserver>
+    </div>
   )
 }
 
