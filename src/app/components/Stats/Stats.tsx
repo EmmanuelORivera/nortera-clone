@@ -6,7 +6,7 @@ import StatsImage from './StatsImage'
 
 const Stats = () => {
   return (
-    <div className="mt-11">
+    <div className="mt-11 mb-16">
       <h2 className="text-2xl font-semibold uppercase mb-16">
         Nortera in numbers
       </h2>
