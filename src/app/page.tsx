@@ -1,3 +1,4 @@
+import HomePageIntersectionObserver from './HomePageIntersectionObserver'
 import AboutCompany from './components/AboutCompany/AboutCompany'
 import BusinessInfo from './components/BusinessInfo/BusinessInfo'
 import Hero from './components/Hero/Hero'
@@ -8,6 +9,7 @@ import Stats from './components/Stats/Stats'
 export default function Home() {
   return (
     <main className="">
+      <HomePageIntersectionObserver />
       <Hero />
       <Mosaic />
       <AboutCompany />
