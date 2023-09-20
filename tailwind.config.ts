@@ -8,6 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      lineHeight: {
+        smallvw: '5vw',
+        bigvw: '2.5vw',
+      },
+      fontSize: {
+        smallvw: '2.4169vw',
+        mediumvw: 'calc(17.6px + 1vw)',
+        bigvw: '2.2222vw',
+        xlvw: 'calc(7.2px + 4.5vw)',
+      },
+
       animation: {
         slide: 'slide 50s linear infinite',
         hoverIn: 'hoverIn .3s ease-in-out forwards',
@@ -43,7 +54,7 @@ const config: Config = {
           '100%': { transform: 'translateY(101%)' },
         },
         showsDown: {
-          '0%': { transform: 'translateY(-70px)', opacity: '0' },
+          '0%': { transform: 'translateY(-15vw)', opacity: '0' },
           '50%': { opacity: '1' },
           '100%': { transform: 'translateY(0)' },
         },
@@ -56,7 +67,7 @@ const config: Config = {
           },
         },
         showsDownTitle: {
-          '0%': { transform: 'translateY(-15px)', opacity: '0' },
+          '0%': { transform: 'translateY(-25vw)', opacity: '0' },
           '50%': { opacity: '1' },
           '100%': { transform: 'translateY(0)' },
         },
@@ -65,7 +76,7 @@ const config: Config = {
           '100%': { transform: 'scale(1)' },
         },
         showsUp: {
-          '0%': { transform: 'translateY(30px)', opacity: '0' },
+          '0%': { transform: 'translateY(10vw)', opacity: '0' },
           '50%': { opacity: '1' },
           '100%': { transform: 'translateY(0)' },
         },
