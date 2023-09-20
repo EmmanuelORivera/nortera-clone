@@ -1,13 +1,18 @@
 // To use the hover animation it is needed to place the className ='group' to the parent component
 interface GoToArrowProps {
+  type?: 'basic' | 'big'
   className?: string
 }
 
-const GoToArrow = ({ className }: GoToArrowProps) => {
+const GoToArrow = ({ type = 'basic', className }: GoToArrowProps) => {
+  const size =
+    type === 'basic'
+      ? 'w-[10.66vw] h-[10.66vw] md:w-[2.77vw] md:h-[2.77vw]'
+      : 'w-[15.66vw] h-[15.66vw] md:w-[7.77vw] md:h-[7.77vw]'
   return (
     <span
       data-testid="wrapper"
-      className={`${className} relative bg-white w-[10.66vw] h-[10.66vw] md:w-[2.77vw] md:h-[2.77vw] rounded-full flex justify-center items-center overflow-hidden text-custom-green`}
+      className={`${className} relative bg-white ${size} rounded-full flex justify-center items-center overflow-hidden text-custom-green`}
     >
       <span
         data-testid="animated-span"
