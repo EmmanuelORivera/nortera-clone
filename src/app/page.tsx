@@ -10,7 +10,7 @@ import Stats from './components/Stats/Stats'
 export default function Home() {
   return (
     <main className="">
-      <div className="px-[8.832px]">
+      <div className="px-[1.6667vw] md:px-[2.1333vw]">
         <HomePageIntersectionObserver />
         <Hero />
         <Mosaic />
