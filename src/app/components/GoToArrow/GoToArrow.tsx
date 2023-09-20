@@ -7,7 +7,7 @@ const GoToArrow = ({ className }: GoToArrowProps) => {
   return (
     <span
       data-testid="wrapper"
-      className={`${className} relative bg-white w-[10.66vw] h-[10.66vw] rounded-full flex justify-center items-center overflow-hidden text-custom-green`}
+      className={`${className} relative bg-white w-[10.66vw] h-[10.66vw] md:w-[2.77vw] md:h-[2.77vw] rounded-full flex justify-center items-center overflow-hidden text-custom-green`}
     >
       <span
         data-testid="animated-span"

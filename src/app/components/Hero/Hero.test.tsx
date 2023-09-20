@@ -1,6 +1,12 @@
 import { screen, render } from '@testing-library/react'
 import Hero from './Hero'
 
+jest.mock('../../svgComponents/Nortera', () => () => {
+  const MockedNortera = () => <div data-testid="nortera">Nortera Component</div>
+  MockedNortera.displayName = 'Nortera'
+  return MockedNortera()
+})
+
 describe('Hero', () => {
   it('should render an image', () => {
     render(<Hero />)
@@ -20,13 +26,11 @@ describe('Hero', () => {
     expect(paragraphElement).toBeInTheDocument()
   })
 
-  it('should render a heading with "Nortera" as inner text', () => {
+  it('should render Nortera Component', () => {
     render(<Hero />)
 
-    const headingElement = screen.getByRole('heading')
+    const component = screen.getByTestId('nortera')
 
-    expect(headingElement).toBeInTheDocument()
-    expect(screen.getByText('Nor')).toBeInTheDocument()
-    expect(screen.getByText('tera')).toBeInTheDocument()
+    expect(component).toBeInTheDocument()
   })
 })
