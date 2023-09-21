@@ -25,9 +25,18 @@ const config: Config = {
         hoverOut: 'hoverOut .3s ease-in-out forwards',
         showsDown: 'showsDown .8s ease-in-out',
         clipPathUp: 'clipPathUp 1.3s ease-in-out forwards',
+        showsFromRight: 'showsFromRight .4s ease-in-out forwards',
+        hideFromLeft: 'hideFromLeft .4s ease-in-out forwards',
         showsDownTitle: 'showsDownTitle .8s ease-in-out',
         showsUp: 'showsUp .8s ease-in-out',
         showsUpTitle: 'showsUpTitle .8s ease-in-out',
+        burgerFirstLine: 'burgerFirstLine .4s ease-in-out forwards',
+        burgerFirstLineClosed: 'burgerFirstLineClosed .4s ease-in-out forwards',
+        burgerMiddleLine: 'burgerMiddleLine .4s ease-in-out forwards',
+        burgerMiddleLineClosed:
+          'burgerMiddleLineClosed .4s ease-in-out forwards',
+        burgerLastLine: 'burgerLastLine .4s ease-in-out forwards',
+        burgerLastLineClosed: 'burgerLastLineClosed .4s ease-in-out forwards',
         zoomImage: 'zoomImage .4s ease-in-out .8s forwards',
       },
       colors: {
@@ -66,6 +75,14 @@ const config: Config = {
             clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
           },
         },
+        showsFromRight: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        hideFromLeft: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
         showsDownTitle: {
           '0%': { transform: 'translateY(-25vw)', opacity: '0' },
           '50%': { opacity: '1' },
@@ -84,6 +101,30 @@ const config: Config = {
           '0%': { transform: 'translateY(15px)', opacity: '0' },
           '50%': { opacity: '1' },
           '100%': { transform: 'translateY(0)' },
+        },
+        burgerFirstLine: {
+          '0%': { transform: 'translateY(0) rotate(0deg)' },
+          '100%': { transform: 'translateY(5px) rotate(45deg)' },
+        },
+        burgerFirstLineClosed: {
+          '0%': { transform: 'translateY(5px) rotate(45deg)' },
+          '100%': { transform: 'translateY(0) rotate(0deg)' },
+        },
+        burgerMiddleLine: {
+          '0%': { transform: 'translateX(0)', opacity: '1' },
+          '100%': { transform: 'translateX(105%)', opacity: '0' },
+        },
+        burgerMiddleLineClosed: {
+          '0%': { transform: 'translateX(105%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        burgerLastLine: {
+          '0%': { transform: 'translateY(0) rotate(0deg)' },
+          '100%': { transform: 'translateY(-5px) rotate(-45deg)' },
+        },
+        burgerLastLineClosed: {
+          '0%': { transform: 'translateY(-5px) rotate(-45deg)' },
+          '100%': { transform: 'translateY(0) rotate(0deg)' },
         },
       },
     },
