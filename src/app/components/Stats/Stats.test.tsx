@@ -96,27 +96,31 @@ describe('Stats', () => {
   it('should render a link with the right text', () => {
     render(<Stats />)
 
-    const linkElement = screen.getByRole('link', {
+    const linkElements = screen.getAllByRole('link', {
       name: /learn about our approach/i,
     })
 
-    expect(linkElement).toBeInTheDocument()
+    linkElements.forEach((linkelement) => {
+      expect(linkelement).toBeInTheDocument()
+    })
   })
 
   it('should have a valid href for the link', () => {
     render(<Stats />)
 
-    const linkElement = screen.getByRole('link', {
+    const linkElements = screen.getAllByRole('link', {
       name: /learn about our approach/i,
     })
 
-    expect(linkElement).toHaveAttribute('href', '#')
+    linkElements.forEach((linkelement) => {
+      expect(linkelement).toHaveAttribute('href', '#')
+    })
   })
 
-  it('should render GoToArrow component', () => {
+  it('should render 2 GoToArrow components', () => {
     render(<Stats />)
-    const svgElement = screen.getByTestId('go-to-arrow')
+    const svgElements = screen.getAllByTestId('go-to-arrow')
 
-    expect(svgElement).toBeInTheDocument()
+    expect(svgElements.length).toBe(2)
   })
 })
