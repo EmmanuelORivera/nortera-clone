@@ -24,13 +24,15 @@ const Stats = () => {
             and markets over 450,000 tons of frozen and canned vegetables per
             year
           </p>
-          <Link
-            href="#"
-            className="group mt-16 items-center gap-4 uppercase text-sm hidden md:inline-flex"
-          >
-            <GoToArrow />
-            Learn about our approach
-          </Link>
+          <span className=" mt-16 uppercase text-sm  md:text-[calc(12.4px + .25vw)] lg:text-[1.11vw]">
+            <Link
+              href="#"
+              className="group items-center gap-4 md:inline-flex hidden"
+            >
+              <GoToArrow />
+              Learn about our approach
+            </Link>
+          </span>
         </div>
 
         <div className="grid grid-cols-2 gap-x-5 gap-y-16 md:grid-rows-3 md:grid-cols-1">

@@ -80,7 +80,7 @@ const StatsData = ({ data, description }: StatsDataProps) => {
       </p>
       <p
         id={`description-${data}`}
-        className="text-sm md:text-[12.4px+.25vw] lg:text-[1.1vw] md:leading-[4vw] uppercase font-semibold opacity-0"
+        className="text-sm md:text-[12.4px+.25vw] lg:text-[1.1vw] md:leading-[2.3vw] uppercase font-semibold opacity-0"
       >
         {description}
       </p>
