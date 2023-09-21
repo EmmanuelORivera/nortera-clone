@@ -70,17 +70,17 @@ const StatsData = ({ data, description }: StatsDataProps) => {
   useIntersectionObserver(`#title-${data}`, startAnimation)
 
   return (
-    <div ref={component}>
+    <div ref={component} className="h-full">
       <p
         id={`title-${data}`}
         ref={title}
-        className="text-4xl font-semibold overflow-hidden opacity-0"
+        className="text-4xl md:text-xlvw md:leading-[4vw]  font-semibold overflow-hidden opacity-0"
       >
         {data}
       </p>
       <p
         id={`description-${data}`}
-        className="text-sm uppercase font-semibold opacity-0"
+        className="text-sm md:text-[12.4px+.25vw] lg:text-[1.1vw] md:leading-[4vw] uppercase font-semibold opacity-0"
       >
         {description}
       </p>
