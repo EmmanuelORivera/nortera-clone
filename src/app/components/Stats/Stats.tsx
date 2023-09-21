@@ -18,7 +18,7 @@ const Stats = () => {
 
         <div className="flex flex-col justify-between">
           <p
-            className={`${MOVE_DOWN_CLASS} text-2xl leading-7 mt-9 mb-16 md:text-mediumvw lg:text-bigvw md:leading-[4vw] lg:leading-bigvw`}
+            className={`${MOVE_DOWN_CLASS} text-2xl leading-7 mt-9 mb-16 md:my-0 md:text-mediumvw lg:text-bigvw md:leading-[4vw] lg:leading-bigvw`}
           >
             With facilities in Canada and the United States, Nortera processes
             and markets over 450,000 tons of frozen and canned vegetables per
