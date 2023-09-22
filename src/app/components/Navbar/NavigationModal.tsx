@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import { useEffect } from 'react'
 
 const NavigationModal = ({ isOpen }: { isOpen: boolean }) => {
@@ -18,7 +19,13 @@ const NavigationModal = ({ isOpen }: { isOpen: boolean }) => {
   return (
     <div
       className={`h-full w-full bg-white fixed top-0 z-40 translate-x-[100%] ${animation}`}
-    ></div>
+    >
+      <button>our food +</button>
+      <Link href="#">our approach</Link>
+      <Link href="#">jobs</Link>
+      <button>who we are +</button>
+      <Link href="#">contact us</Link>
+    </div>
   )
 }
 
