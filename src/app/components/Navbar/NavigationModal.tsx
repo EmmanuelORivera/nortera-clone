@@ -18,7 +18,7 @@ const NavigationModal = ({ isOpen }: { isOpen: boolean }) => {
   }, [isOpen])
   return (
     <div
-      className={`h-full w-full bg-white fixed top-0 z-40 translate-x-[100%] ${animation}`}
+      className={`px-[1.6667vw] md:px-[2.1333vw] h-full w-full bg-white fixed top-0 z-40 translate-x-[100%] ${animation}`}
     >
       <div className="absolute top-[15vh] w-full grid justify-start gap-10 text-[calc(17.6px+1vw)] uppercase font-semibold pb-12 border-b border-black">
         <button className="text-left uppercase">our food +</button>
