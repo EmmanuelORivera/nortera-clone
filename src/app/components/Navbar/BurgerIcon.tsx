@@ -2,9 +2,11 @@
 const BurgerIcon = ({
   isOpen,
   setIsOpen,
+  setNavigationModalAnimation,
 }: {
   isOpen: boolean
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
+  setNavigationModalAnimation: React.Dispatch<React.SetStateAction<string>>
 }) => {
   const buttonBackground = isOpen ? 'bg-[#dbe7e8]' : 'bg-white'
   const firstLineAnimation = isOpen
@@ -20,6 +22,11 @@ const BurgerIcon = ({
     : 'animate-burgerLastLineClosed'
 
   const handleClick = () => {
+    if (isOpen) {
+      setNavigationModalAnimation('animate-hideFromLeft')
+    } else {
+      setNavigationModalAnimation('animate-showsFromRight')
+    }
     setIsOpen((prevIsOpen) => !prevIsOpen)
   }
   return (

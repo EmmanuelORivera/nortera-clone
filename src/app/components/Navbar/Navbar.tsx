@@ -6,13 +6,18 @@ import NavigationModal from './NavigationModal'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [navigationModalAnimation, setNavigationModalAnimation] = useState('')
   return (
     <>
       <nav className="flex items-center relative bg-transparent justify-between py-6 px-[1.6667vw] md:px-[2.1333vw] z-50">
         <Logo />
-        <BurgerIcon isOpen={isOpen} setIsOpen={setIsOpen} />
+        <BurgerIcon
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          setNavigationModalAnimation={setNavigationModalAnimation}
+        />
       </nav>
-      <NavigationModal isOpen={isOpen} />
+      <NavigationModal isOpen={isOpen} animation={navigationModalAnimation} />
     </>
   )
 }
