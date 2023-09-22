@@ -25,4 +25,16 @@ describe('Navbar', () => {
 
     expect(burgerIconElement).toBeInTheDocument()
   })
+
+  it('should be a "fixed" navbar', () => {
+    const { container } = render(<Navbar />)
+
+    expect(container.firstChild).toHaveClass('fixed')
+  })
+
+  it('should have a div with a "mb-20" class', () => {
+    const { container } = render(<Navbar />)
+
+    expect(container.lastChild).toHaveClass('mb-20')
+  })
 })
