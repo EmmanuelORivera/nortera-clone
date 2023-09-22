@@ -1,18 +1,44 @@
-const BurgerIcon = () => {
+'use client'
+const BurgerIcon = ({
+  isOpen,
+  setIsOpen,
+}: {
+  isOpen: boolean
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
+}) => {
+  const buttonBackground = isOpen ? 'bg-[#dbe7e8]' : 'bg-white'
+  const firstLineAnimation = isOpen
+    ? 'animate-burgerFirstLine'
+    : 'animate-burgerFirstLineClosed'
+
+  const middleLineAnimation = isOpen
+    ? 'animate-burgerMiddleLine'
+    : 'animate-burgerMiddleLineClosed'
+
+  const lastLineAnimation = isOpen
+    ? 'animate-burgerLastLine'
+    : 'animate-burgerLastLineClosed'
+
+  const handleClick = () => {
+    setIsOpen((prevIsOpen) => !prevIsOpen)
+  }
   return (
-    <button className="bg-white h-10 w-10 rounded-full flex items-center justify-center">
-      <span role="button" aria-label="Burger Icon" className="w-4 h-5">
+    <button
+      onClick={handleClick}
+      className={`${buttonBackground}  h-10 w-10 rounded-full flex items-center justify-center`}
+    >
+      <span role="button" aria-label="Burger Icon" className="w-4 h-4">
         <span
           data-testid="burger-line"
-          className="block h-[1px] bg-custom-green my-1 rounded"
+          className={`block h-[1px] w-full bg-custom-green my-1 rounded ${firstLineAnimation}`}
         ></span>
         <span
           data-testid="burger-line"
-          className="block h-[1px] bg-custom-green my-1 rounded"
+          className={`block h-[1px] w-full bg-custom-green my-1 rounded ${middleLineAnimation}`}
         ></span>
         <span
           data-testid="burger-line"
-          className="block h-[1px] bg-custom-green my-1 rounded"
+          className={`block h-[1px] w-full bg-custom-green my-1 rounded ${lastLineAnimation}`}
         ></span>
       </span>
     </button>
