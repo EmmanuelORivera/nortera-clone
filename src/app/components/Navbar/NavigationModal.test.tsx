@@ -13,7 +13,7 @@ describe('NavigationModal', () => {
     expect(buttonElement).toBeInTheDocument()
   })
 
-  it('should have a link with the text "our approach" and has a correct href proprerty', () => {
+  it('should have a link with the text "our approach" and has a correct href attribute', () => {
     render(<NavigationModal isOpen={true} />)
 
     const linkElement = screen.getByRole('link', { name: 'our approach' })
@@ -21,7 +21,7 @@ describe('NavigationModal', () => {
     expect(linkElement).toHaveAttribute('href', '#')
   })
 
-  it('should have a link with the text "jobs" and has a correct href proprerty', () => {
+  it('should have a link with the text "jobs" and has a correct href attribute', () => {
     render(<NavigationModal isOpen={true} />)
 
     const linkElement = screen.getByRole('link', { name: 'jobs' })
@@ -36,7 +36,7 @@ describe('NavigationModal', () => {
     expect(buttonElement).toBeInTheDocument()
   })
 
-  it('should have a link with the text "contact us" and has a correct href proprerty', () => {
+  it('should have a link with the text "contact us" and has a correct href attribute', () => {
     render(<NavigationModal isOpen={true} />)
 
     const linkElement = screen.getByRole('link', { name: 'contact us' })
