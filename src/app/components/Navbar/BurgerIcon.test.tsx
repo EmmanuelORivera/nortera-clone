@@ -3,11 +3,23 @@ import BurgerIcon from './BurgerIcon'
 
 describe('BurgerIcon', () => {
   it('renders BurgerIcon component without problems', () => {
-    render(<BurgerIcon isOpen={false} setIsOpen={() => {}} />)
+    render(
+      <BurgerIcon
+        isOpen={false}
+        setIsOpen={() => {}}
+        setNavigationModalAnimation={() => {}}
+      />
+    )
   })
 
   it('should render the burger icon button', () => {
-    render(<BurgerIcon isOpen={false} setIsOpen={() => {}} />)
+    render(
+      <BurgerIcon
+        isOpen={false}
+        setIsOpen={() => {}}
+        setNavigationModalAnimation={() => {}}
+      />
+    )
 
     const burgerButton = screen.getByRole('button', { name: 'Burger Icon' })
 
@@ -15,7 +27,13 @@ describe('BurgerIcon', () => {
   })
 
   it('should have the correct number of burger icon lines', () => {
-    render(<BurgerIcon isOpen={false} setIsOpen={() => {}} />)
+    render(
+      <BurgerIcon
+        isOpen={false}
+        setIsOpen={() => {}}
+        setNavigationModalAnimation={() => {}}
+      />
+    )
 
     const burgerLines = screen.getAllByTestId('burger-line')
 
@@ -30,8 +48,15 @@ describe('BurgerIcon', () => {
     ]
 
     const setIsOpen = jest.fn()
+    const setNavigationModalAnimation = jest.fn()
 
-    render(<BurgerIcon isOpen={false} setIsOpen={setIsOpen} />)
+    render(
+      <BurgerIcon
+        isOpen={false}
+        setIsOpen={setIsOpen}
+        setNavigationModalAnimation={setNavigationModalAnimation}
+      />
+    )
 
     const burgerLines = screen.getAllByTestId('burger-line')
 
@@ -47,7 +72,15 @@ describe('BurgerIcon', () => {
       'animate-burgerLastLine',
     ]
     const setIsOpen = jest.fn()
-    render(<BurgerIcon isOpen={true} setIsOpen={setIsOpen} />)
+    const setNavigationModalAnimation = jest.fn()
+
+    render(
+      <BurgerIcon
+        isOpen={true}
+        setIsOpen={setIsOpen}
+        setNavigationModalAnimation={setNavigationModalAnimation}
+      />
+    )
 
     const burgerLines = screen.getAllByTestId('burger-line')
 
@@ -56,14 +89,23 @@ describe('BurgerIcon', () => {
     })
   })
 
-  it('should call the setIsOpen method when the button is clicked', () => {
+  it('should call the methods setIsOpen and setNavigationModalAnimation when the button is clicked', () => {
     const setIsOpen = jest.fn()
-    render(<BurgerIcon isOpen={false} setIsOpen={setIsOpen} />)
+    const setNavigationModalAnimation = jest.fn()
+
+    render(
+      <BurgerIcon
+        isOpen={false}
+        setIsOpen={setIsOpen}
+        setNavigationModalAnimation={setNavigationModalAnimation}
+      />
+    )
 
     const burgerButton = screen.getByRole('button', { name: 'Burger Icon' })
 
     fireEvent.click(burgerButton)
 
     expect(setIsOpen).toHaveBeenCalledTimes(1)
+    expect(setNavigationModalAnimation).toHaveBeenCalledTimes(1)
   })
 })

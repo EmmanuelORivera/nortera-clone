@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Logo = () => {
   return (
-    <Link href="/">
+    <Link href="/" data-testid="logo">
       <svg
         data-testid="navbar-svg"
         width="20"

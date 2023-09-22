@@ -12,7 +12,7 @@ describe('Navbar', () => {
 
   it('should render the Logo Component', () => {
     render(<Navbar />)
-    const logoElement = screen.getByRole('link')
+    const logoElement = screen.getByTestId('logo')
 
     expect(logoElement).toBeInTheDocument()
   })
