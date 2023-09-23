@@ -1,14 +1,17 @@
 'use client'
 const BurgerIcon = ({
   isOpen,
+  isBackgroundWhite = false,
   setIsOpen,
   setNavigationModalAnimation,
 }: {
   isOpen: boolean
+  isBackgroundWhite?: boolean
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
   setNavigationModalAnimation: React.Dispatch<React.SetStateAction<string>>
 }) => {
-  const buttonBackground = isOpen ? 'bg-[#dbe7e8]' : 'bg-white'
+  const buttonBackground =
+    isOpen || isBackgroundWhite ? 'bg-[#dbe7e8]' : 'bg-white'
   const firstLineAnimation = isOpen
     ? 'animate-burgerFirstLine'
     : 'animate-burgerFirstLineClosed'
