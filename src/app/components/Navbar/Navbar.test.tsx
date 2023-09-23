@@ -27,14 +27,14 @@ describe('Navbar', () => {
   })
 
   it('should be a "fixed" navbar', () => {
-    const { container } = render(<Navbar />)
+    render(<Navbar />)
 
-    expect(container.firstChild).toHaveClass('fixed')
+    expect(screen.getByTestId('header')).toHaveClass('fixed')
   })
 
   it('should have a div with a "mb-20" class', () => {
-    const { container } = render(<Navbar />)
+    render(<Navbar />)
 
-    expect(container.lastChild).toHaveClass('mb-20')
+    expect(screen.getByTestId('spacer')).toHaveClass('mb-20')
   })
 })

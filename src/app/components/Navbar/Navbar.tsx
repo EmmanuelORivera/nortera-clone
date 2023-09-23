@@ -39,7 +39,11 @@ const Navbar = () => {
 
   return (
     <>
-      <header ref={navbar} className={`fixed top-0 w-full z-50 transition-all`}>
+      <header
+        data-testid="header"
+        ref={navbar}
+        className={`fixed top-0 w-full z-50 transition-all`}
+      >
         <nav
           className={`${backgroundColor} transition-all flex items-center relative justify-between py-6 px-[1.6667vw] md:px-[2.1333vw] z-50`}
         >
@@ -53,7 +57,7 @@ const Navbar = () => {
         </nav>
         <NavigationModal isOpen={isOpen} animation={navigationModalAnimation} />
       </header>
-      <div className="mb-20"></div>
+      <div data-testid="spacer" className="mb-20"></div>
     </>
   )
 }

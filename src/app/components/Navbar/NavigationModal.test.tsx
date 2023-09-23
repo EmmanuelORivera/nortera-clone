@@ -47,10 +47,8 @@ describe('NavigationModal', () => {
   it('should pass the animation to the className of the wrapper', () => {
     const animation = 'test-animation'
 
-    const { container } = render(
-      <NavigationModal isOpen={true} animation={animation} />
-    )
+    render(<NavigationModal isOpen={true} animation={animation} />)
 
-    expect(container.firstChild).toHaveClass(animation)
+    expect(screen.getByTestId('navigation-modal')).toHaveClass(animation)
   })
 })
