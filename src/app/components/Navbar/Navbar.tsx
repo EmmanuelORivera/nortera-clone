@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isBackgroundWhite, setIsBackgroundWhite] = useState(false)
   const [navigationModalAnimation, setNavigationModalAnimation] = useState('')
-  const navbar = useRef<HTMLElement | null>(null)
+  const navbarRef = useRef<HTMLElement | null>(null)
   const backgroundColor = isBackgroundWhite ? 'bg-white' : 'bg-transparent'
 
   useLayoutEffect(() => {
@@ -17,18 +17,18 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScroll = window.scrollY
 
-      if (navbar.current)
+      if (navbarRef.current)
         if (currentScroll <= 0) {
-          navbar.current.classList.remove('scrollUp')
+          navbarRef.current.classList.remove('scrollUp')
           setIsBackgroundWhite(false)
         } else if (lastScroll === 0) {
-          navbar.current.classList.remove('scrollUp')
+          navbarRef.current.classList.remove('scrollUp')
           setIsBackgroundWhite(true)
         } else if (currentScroll > lastScroll && !isOpen) {
-          navbar.current.classList.add('scrollUp')
+          navbarRef.current.classList.add('scrollUp')
           setIsBackgroundWhite(true)
         } else if (currentScroll < lastScroll) {
-          navbar.current.classList.remove('scrollUp')
+          navbarRef.current.classList.remove('scrollUp')
           setIsBackgroundWhite(true)
         }
       lastScroll = currentScroll
@@ -44,7 +44,7 @@ const Navbar = () => {
     <>
       <header
         data-testid="header"
-        ref={navbar}
+        ref={navbarRef}
         className={`fixed top-0 w-full z-50 transition-all`}
       >
         <nav
