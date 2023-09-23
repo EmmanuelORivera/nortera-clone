@@ -25,3 +25,9 @@ body {
 .initial-zoom {
   transform: scale(1);
 }
+
+/* Navbar CSS Transition Starts */
+.scrollUp {
+  transform: translateY(-100%);
+}
+/* Navbar CSS Transition Ends */
