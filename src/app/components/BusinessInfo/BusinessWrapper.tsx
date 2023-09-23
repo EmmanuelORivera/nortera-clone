@@ -34,7 +34,7 @@ const BusinessWrapper = ({
       </div>
       <GoToArrow
         type="big"
-        className="mx-auto z-50 translate-y-5 md:absolute md:bottom-6 md:left-[50%] md:-translate-x-[50%]"
+        className="mx-auto translate-y-5 md:absolute md:bottom-6 md:left-[50%] md:-translate-x-[50%]"
       />
       {children}
     </div>
