@@ -9,7 +9,7 @@ const JoinOurTeam = () => {
     target.classList.add('animate-clipPathUp')
   })
   return (
-    <div className="bg-custom-green text-white px-[1.6667vw] md:px-[2.1333vw] md:grid md:grid-cols-[41.8201875vw_47.9135vw] lg:md:grid-cols-[41.8201875vw_41.8201875vw] md:justify-end md:gap-[6.0933125vw] pt-6 pb-16 border-b-2 border-white">
+    <div className="md:grid md:grid-cols-[41.8201875vw_47.9135vw] lg:md:grid-cols-[41.8201875vw_41.8201875vw] md:justify-end md:gap-[6.0933125vw] pt-6 pb-16 border-b-2 border-white">
       <div className="h-[121vw] md:h-full mb-12 order-2">
         <Image
           id="working-people"

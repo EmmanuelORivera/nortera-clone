@@ -6,6 +6,7 @@ import ImageSlider from './components/ImageSlider/ImageSlider'
 import JoinOurTeam from './components/JoinOurTeam/JoinOurTeam'
 import Mosaic from './components/Mosaic/Mosaic'
 import Stats from './components/Stats/Stats'
+import Nortera from './svgComponents/Nortera'
 
 export default function Home() {
   return (
@@ -19,7 +20,10 @@ export default function Home() {
         <BusinessInfo />
         <Stats />
       </div>
-      <JoinOurTeam />
+      <div className="bg-custom-green text-white px-[1.6667vw] md:px-[2.1333vw]">
+        <JoinOurTeam />
+        <Nortera />
+      </div>
     </main>
   )
 }
