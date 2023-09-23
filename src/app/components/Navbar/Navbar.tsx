@@ -19,9 +19,12 @@ const Navbar = () => {
 
       if (navbar.current)
         if (currentScroll <= 0) {
-          navbar.current.classList.remove('animate-scrollUp')
+          navbar.current.classList.remove('scrollUp')
           setIsBackgroundWhite(false)
-        } else if (currentScroll > lastScroll) {
+        } else if (lastScroll === 0) {
+          navbar.current.classList.remove('scrollUp')
+          setIsBackgroundWhite(true)
+        } else if (currentScroll > lastScroll && !isOpen) {
           navbar.current.classList.add('scrollUp')
           setIsBackgroundWhite(true)
         } else if (currentScroll < lastScroll) {
@@ -35,7 +38,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [isOpen])
 
   return (
     <>
