@@ -37,4 +37,20 @@ describe('Navbar', () => {
 
     expect(screen.getByTestId('spacer')).toHaveClass('mb-20')
   })
+
+  it('toggles the modal when the burger icon is clicked', () => {
+    render(<Navbar />)
+
+    const burgerElement = screen.getByLabelText('Burger Icon')
+    const modal = screen.queryByTestId('navigation-modal')
+
+    expect(modal).toHaveClass('translate-x-[100%]')
+    expect(modal).not.toHaveClass('animate-showsFromRight')
+
+    fireEvent.click(burgerElement)
+    expect(modal).toHaveClass('animate-showsFromRight')
+
+    fireEvent.click(burgerElement)
+    expect(modal).not.toHaveClass('animate-showsFromRight')
+  })
 })
