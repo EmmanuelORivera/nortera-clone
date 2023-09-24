@@ -23,12 +23,12 @@ const config: Config = {
         slide: 'slide 50s linear infinite',
         hoverIn: 'hoverIn .3s ease-in-out forwards',
         hoverOut: 'hoverOut .3s ease-in-out forwards',
-        showsDown: 'showsDown .8s ease-in-out',
+        showsDown: 'showsDown .8s ease-in-out forwards',
         clipPathUp: 'clipPathUp 1.3s ease-in-out forwards',
         showsFromRight: 'showsFromRight .2s ease-in-out forwards',
         hideFromLeft: 'hideFromLeft .2s ease-in-out forwards',
         showsDownTitle: 'showsDownTitle .8s ease-in-out',
-        showsUp: 'showsUp .8s ease-in-out',
+        showsUp: 'showsUp .8s ease-in-out forwards',
         showsUpTitle: 'showsUpTitle .8s ease-in-out',
         burgerFirstLine: 'burgerFirstLine .4s ease-in-out forwards',
         burgerFirstLineClosed: 'burgerFirstLineClosed .4s ease-in-out forwards',
@@ -65,7 +65,7 @@ const config: Config = {
         showsDown: {
           '0%': { transform: 'translateY(-15vw)', opacity: '0' },
           '50%': { opacity: '1' },
-          '100%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         clipPathUp: {
           '0%': {
@@ -95,7 +95,7 @@ const config: Config = {
         showsUp: {
           '0%': { transform: 'translateY(10vw)', opacity: '0' },
           '50%': { opacity: '1' },
-          '100%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         showsUpTitle: {
           '0%': { transform: 'translateY(15px)', opacity: '0' },
