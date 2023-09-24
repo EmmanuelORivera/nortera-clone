@@ -24,7 +24,7 @@ https://www.datocms-assets.com/85733/1681222357-2022-08-03_09102545_photo_by_jim
           The North American leader in ready-to-cook vegetables
         </p>
       </div>
-      <Nortera className=" my-20" />
+      <Nortera className=" my-20" id="1" />
     </div>
   )
 }

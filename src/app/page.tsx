@@ -22,7 +22,7 @@ export default function Home() {
       </div>
       <div className="bg-custom-green text-white px-[1.6667vw] md:px-[2.1333vw]">
         <JoinOurTeam />
-        <Nortera />
+        <Nortera className="mt-8 " id="2" />
       </div>
     </main>
   )
