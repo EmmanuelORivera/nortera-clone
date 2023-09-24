@@ -9,7 +9,7 @@ Visit this page at https://nostera-clone.vercel.app/
 - [Usage](#usage)
 
 ## Introduction
-The **Nostera Clone Page** is a responsive web application that replicates the appearance and functionality of the Nortera index website. This project serves as a sandbox for practicing various technologies and skills, including:
+The **Nostera Clone Page** is a responsive web application that replicates the appearance and functionality of the Nortera Home Page. This project serves as a sandbox for practicing various technologies and skills, including:
 
 - **Next.js:** A React framework for building server-rendered React applications.
 - **Tailwind CSS:** A utility-first CSS framework for rapidly creating custom designs.
