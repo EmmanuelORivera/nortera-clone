@@ -1,6 +1,7 @@
 import HomePageIntersectionObserver from './HomePageIntersectionObserver'
 import AboutCompany from './components/AboutCompany/AboutCompany'
 import BusinessInfo from './components/BusinessInfo/BusinessInfo'
+import Footer from './components/Footer/Footer'
 import Hero from './components/Hero/Hero'
 import ImageSlider from './components/ImageSlider/ImageSlider'
 import JoinOurTeam from './components/JoinOurTeam/JoinOurTeam'
@@ -23,6 +24,7 @@ export default function Home() {
       <div className="bg-custom-green text-white px-[1.6667vw] md:px-[2.1333vw]">
         <JoinOurTeam />
         <Nortera className="mt-8 " id="2" />
+        <Footer />
       </div>
     </main>
   )
