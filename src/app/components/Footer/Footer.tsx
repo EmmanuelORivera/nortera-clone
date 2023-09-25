@@ -17,7 +17,7 @@ const Footer = () => {
           <p>Rochester, NY 14623</p>
         </div>
       </div>
-      <div className="flex text-sm lg:text-[1vw] gap-[2.13vw] justify-between">
+      <div className="flex text-sm lg:text-[1vw] gap-[2.13vw] lg:gap-[6.13vw] justify-between">
         {/* left */}
         <div className="flex flex-col gap-[1.5vw] flex-1">
           <div className="grid gap-2">
@@ -60,7 +60,7 @@ const Footer = () => {
           <div className="grid gap-4 lg:leading-8">
             <Link
               href="#"
-              className="uppercase lg:text-[1.1vw] font-semibold  block"
+              className="uppercase lg:text-[1.1vw] font-semibold  block lg:w-[200px]"
             >
               Press Relations
             </Link>
