@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="flex text-sm gap-[2.13vw] mb-16 justify-between">
         <div className="flex-1">
           <p className="uppercase font-semibold ">Canada</p>
-          <p>140, rue de l'Équinoxe</p>
+          <p>140, rue de l&apos;Équinoxe</p>
           <p>Brossard, QC J4Z 0R4</p>
         </div>
         <div className="flex-1">
