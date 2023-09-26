@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import StyledLink from './StyledLink'
 
 const Footer = () => {
   return (
@@ -22,22 +22,18 @@ const Footer = () => {
         <div className="flex flex-col gap-[1.5vw] flex-1">
           <div className="grid gap-2">
             <p className="uppercase lg:text-[1.1vw] font-semibold ">Our food</p>
-            <Link href="#" className="block">
-              Our Custom Products
-            </Link>
-            <Link href="#" className="block">
-              Our Brands
-            </Link>
+            <StyledLink href="#">Our Custom Products</StyledLink>
+            <StyledLink href="#">Our Brands</StyledLink>
           </div>
           <div>
-            <Link href="#" className="uppercase lg:text-[1.1vw] font-semibold ">
+            <StyledLink href="#" type="title">
               Our Approach
-            </Link>
+            </StyledLink>
           </div>
           <div>
-            <Link href="#" className="uppercase lg:text-[1.1vw] font-semibold ">
+            <StyledLink href="#" type="title">
               Contact Us
-            </Link>
+            </StyledLink>
           </div>
         </div>
         {/* right */}
@@ -45,46 +41,34 @@ const Footer = () => {
           <div>
             <div className="grid gap-2 mb-2">
               <p className="uppercase lg:text-[1.1vw] font-semibold ">Jobs</p>
-              <Link href="#">Working at Nortera</Link>
-              <Link href="#">Our Open Positions</Link>
+              <StyledLink href="#">Working at Nortera</StyledLink>
+              <StyledLink href="#">Our Open Positions</StyledLink>
             </div>
 
             <div className="grid gap-2">
               <p className=" uppercase lg:leading-8 lg:text-[1.1vw] font-semibold lg:w-[200px]">
                 Who we are
               </p>
-              <Link href="#">About Us</Link>
-              <Link href="#">Our Commitments</Link>
+              <StyledLink href="#">About Us</StyledLink>
+              <StyledLink href="#">Our Commitments</StyledLink>
             </div>
           </div>
           <div className="grid gap-4 lg:leading-8">
-            <Link
-              href="#"
-              className="uppercase lg:text-[1.1vw] font-semibold  block lg:w-[200px]"
-            >
+            <StyledLink className="lg:w-[200px]" href="#" type="title">
               Press Relations
-            </Link>
+            </StyledLink>
 
-            <Link
-              href="#"
-              className="uppercase lg:text-[1.1vw] font-semibold  block"
-            >
+            <StyledLink href="#" type="title">
               FAQ
-            </Link>
+            </StyledLink>
 
-            <Link
-              href="#"
-              className="uppercase lg:text-[1.1vw] font-semibold  block"
-            >
+            <StyledLink href="#" type="title">
               Partners
-            </Link>
+            </StyledLink>
 
-            <Link
-              href="#"
-              className="uppercase lg:text-[1.1vw] font-semibold  block"
-            >
+            <StyledLink href="#" type="title">
               Conditions
-            </Link>
+            </StyledLink>
           </div>
         </div>
       </div>
