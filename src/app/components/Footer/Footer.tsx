@@ -25,16 +25,13 @@ const Footer = () => {
             <StyledLink href="#">Our Custom Products</StyledLink>
             <StyledLink href="#">Our Brands</StyledLink>
           </div>
-          <div>
-            <StyledLink href="#" type="title">
-              Our Approach
-            </StyledLink>
-          </div>
-          <div>
-            <StyledLink href="#" type="title">
-              Contact Us
-            </StyledLink>
-          </div>
+          <StyledLink href="#" type="title">
+            Our Approach
+          </StyledLink>
+
+          <StyledLink href="#" type="title">
+            Contact Us
+          </StyledLink>
         </div>
         {/* right */}
         <div className="flex flex-col lg:flex-row lg:gap-[6.25vw] lg:mr-[min(88px,6.1111111111vw)] gap-[1.5vw] flex-1">

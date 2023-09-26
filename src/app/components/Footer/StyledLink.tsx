@@ -14,10 +14,14 @@ const StyledLink = ({
 }) => {
   const style = type === 'title' && 'uppercase lg:text-[1.1vw] font-semibold'
   return (
-    <Link href={href} className={`${className} ${style} block relative group`}>
-      {children}
-      <div className="absolute bg-white h-[.5px] w-full bottom-0 rounded origin-right scale-x-0 transition ease-in-out  group-hover:origin-left group-hover:scale-x-100"></div>
-    </Link>
+    <div>
+      <Link
+        href={href}
+        className={`${className} ${style} inline-block relative group before:content-[''] before:absolute before:bg-white before:h-[.5px] before:w-full before:bottom-0 before:rounded before:origin-right before:scale-x-0 before:transition before:ease-in-out hover:before:origin-left hover:before:scale-x-100`}
+      >
+        {children}
+      </Link>
+    </div>
   )
 }
 
